@@ -11,8 +11,6 @@ import { Input } from '../ui/input'
 import { Label } from '../ui/label'
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from '../ui/select'
 
-const companyArray = [];
-
 const PostJob = () => {
     const [input, setInput] = useState({
         title: "",
@@ -156,7 +154,7 @@ const PostJob = () => {
                                             {
                                                 companies.map((company) => {
                                                     return (
-                                                        <SelectItem value={company?.name?.toLowerCase()}>{company.name}</SelectItem>
+                                                        <SelectItem key={company?.name} value={company?.name?.toLowerCase()}>{company.name}</SelectItem>
                                                     )
                                                 })
                                             }
