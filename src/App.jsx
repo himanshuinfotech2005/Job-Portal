@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 
@@ -7,7 +6,7 @@ import Applicants from './components/admin/Applicants'
 import Companies from './components/admin/Companies'
 import CompanyCreate from './components/admin/CompanyCreate'
 import CompanySetup from './components/admin/CompanySetup'
-import PostJob from './components/admin/postJob'
+import PostJob from './components/admin/PostJob'
 import Login from './components/auth/Login'
 import Signup from './components/auth/Signup'
 import Browse from './components/Browse'
@@ -74,8 +73,6 @@ const appRouter=createBrowserRouter([
 ])
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div>
       <RouterProvider router={appRouter}/>
